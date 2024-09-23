@@ -64,7 +64,7 @@ const UserController={
             res.clearCookie("authtoken",{
                 httpOnly:true,
                 secure:true,
-                sameSite:true,
+                sameSite:"none",
             })
             res.send({message:"successfully logout"})
         } catch (error) {
